@@ -1,0 +1,475 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;600;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*supaya value dari border dan padding masuk kedalam hitungan ketika kita ngeset ukuran elemen*/
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6, strong {
+    color: #232e35;
+}
+
+p {
+    font-size: 1rem; /*16 px*/
+    line-height: 1.50rem;
+}
+
+p, label, input, textarea, li {
+    color: rgb(120, 120, 120);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(53, 48, 48);
+
+}
+
+.main-container {
+    width : 1100px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .main-container {
+        width: 90%;
+    }
+}
+
+.btn {
+    padding: 1rem 1.5rem;
+    margin-top: 20px;
+    background: white;
+    border: 2px solid #010d16;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    border-radius: 2rem;
+}
+
+.btn:hover {
+    box-shadow: rgba(231, 226, 226, 0.8) 9px 9px 9px ;
+}
+
+/* tittles */
+.section-title {
+    margin: 1rem 0 4rem;
+    font-size: 2rem;
+}
+.pre-title {
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    color: rgb(120, 120, 120);
+    position: relative;
+    padding-left: 40px;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.pre-title::before {
+    content: "";
+    width: 30px;
+    height: 1px;
+    background:rgb(120, 120, 120);;
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 50%;
+}
+
+/* layouts */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /*untuk bagian responsive*/
+    gap: 3rem;
+}
+
+/*Logo dan navigation menu*/
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    position: fixed;
+    background-color: #bfced9be;
+    z-index: 1000; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.logo a {
+    color: #232e35;;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    position: relative;
+}
+
+/* burger */
+.burger div{
+    width: 25px;
+    height: 2px;
+    background-color: #000;
+    margin: 7px;
+    transition: all 0.3s;
+    z-index: 99;
+}
+
+.burger {
+    display: none;
+    z-index: 99;
+    position: fixed;
+    top: 33px;
+    right: 35px;
+}
+
+a svg:hover {
+    fill: #7ca4c1;
+}
+
+
+.contact-icons {
+    display: flex;
+    align-items: center;
+}
+
+.contact-icons a {
+    margin: 0 1rem;
+    transition: 0.3s ease-in-out;
+    margin-top: 20px;
+}
+
+.contact-icons svg {
+    fill: #3e3f40;
+    transition: fill 0.3s ease-in-out;
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.contact-icons a:hover svg {
+    fill: #7892a5;
+}
+
+.contact-icons a:hover {
+    transform: scale(1.2);
+}
+
+
+
+/* Content */
+#content {
+    height: 550px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+.content-right img {
+    width: 450px;
+    height: 450px;
+}
+
+.content-right {
+    display: flex;
+    justify-content: center;
+}
+
+.name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.5rem 0 1rem;
+}
+
+span {
+    color: #9BB8CD;
+}
+
+/* skill */
+/* Styling for skills section */
+#skill {
+    padding: 6rem 0;
+    text-align: center; /* Center align the content */
+}
+
+.pre-title {
+    font-size: 20px;
+    margin-bottom: 2rem;
+    color: #333; /* Change the pre-title color */
+}
+
+.card-row {
+    max-width: 100%;
+}
+
+.card-column {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.card-logo {
+    padding: 12px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card-logo img {
+    height: 120px;
+    width: 120px;
+    transition: 0.3s ease-in-out;
+    object-fit: fill;
+}
+
+.card-logo {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    border-radius: 10px;
+}
+
+.card-logo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.card-logo:hover img {
+    transform: scale(1.1);
+}
+
+
+/* certificate */
+#certificate {
+    padding: 6rem 0;
+    background-color: #fbfbfb;
+}
+
+.certificate-body {
+    display: grid;
+    height: auto;
+    align-items: center;
+}
+
+.sertifikat-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /*untuk bagian responsive*/
+    gap: 1rem;
+}
+
+.certi-card {
+    height: 200px;
+    margin: 20px;
+    box-shadow: 5px 5px 20px black;
+    overflow: hidden;
+    position: relative;
+    object-fit: cover;
+
+}
+
+.certi-card img {
+    height: 200px;
+    width: 100%;
+    border-radius: 3px;
+    transition: .5s;
+}
+
+.certi-card .intro {
+    height: 60px;
+    width: 3780px;
+    padding: 2px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    background: rgb(27, 27, 27, .5);
+    transition: .5s ease;
+}
+
+.certi-card h1 {
+    margin: 10px;
+    font-size: 40px;
+    color: #000000;
+}
+
+.certi-card p {
+    font-size: 15px;
+    letter-spacing: 3px;
+    color: white;
+    margin: 5px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.certi-card:hover {
+    cursor: pointer;
+}
+
+.certi-card:hover .intro {
+    height: 85%;
+    bottom: 0;
+    background: rgb(27, 27, 27);
+}
+
+.certi-card:hover h1 {
+    color: white;
+
+}
+
+.certi-card:hover p{
+    opacity: 1;
+    visibility: visible;
+}
+
+.certi-card:hover img {
+    transform: scale(1.1) rotate(-3deg);
+}
+
+/* Project section */
+#projek {
+    padding: 6rem 0;
+}
+
+.wrapper {
+    max-width: 90%;
+}
+
+#projek > .wrapper > .projek-card {
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    border-radius: 10px;
+    display: flex;
+    box-shadow: 2px 2px 9px  rgba(231, 226, 226, 0.8);
+    max-width: 80%;
+}
+
+#projek > .wrapper > div > .foto {
+    width: 100%;
+}
+
+#projek > .wrapper > div > .foto > img {
+    max-width: 100%;
+}
+
+#projek > .wrapper > div > .desc{
+    width: 100%;
+    padding: 20px;
+    margin: 10px;
+    background-color: #efeded;
+    border-radius: 10px;
+}
+
+#projek > .wrapper > div > .desc > .link{
+    display: flex;
+    gap: 0.7rem;
+    font-size: 1.3rem;
+    padding-top: 6px;
+}
+
+/* #projek > .wrapper > div > .desc > .link > a > svg:hover {
+    fill: #9BB8CD;
+} */
+
+/* Contact */
+#contact {
+    background-color: #fbfbfb;
+    padding: 6rem 0;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    width: auto;
+}
+
+.contact-form div{
+    margin-bottom: 1.4rem;
+    background-color: white;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    font-family: "Roboto", sans-serif;
+    background: #fbfbfb;
+    border: 1px solid #bcb7b7;
+    border-radius: 3px;
+    resize: none;
+}
+
+.contact-form input::placeholder, 
+.contact-form textarea::placeholder {
+    color: #9d9fa1;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border: 1px solid #7d7d7d;
+}
+
+.btn-submit {
+    width: 100%;
+    height: 30%;
+    padding: 0.75rem 1.3rem;
+    background-color: #86b1cb;
+    color: white;
+    border: none;
+    background-repeat: 3px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    border-radius: 5px;
+}
+
+.btn-submit:hover {
+    background: #7892a5;
+}
+
+.contact-item {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.contact-item-icon {
+    background: #d8e5ed;
+    width: 53px;
+    height: 53px;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-item-detail h4 {
+    margin-bottom: 0.6rem;
+}
+
+/* footer section */
+footer {
+    padding: 2rem;
+    background: #ccdae3;
+    text-align: center;
+}
